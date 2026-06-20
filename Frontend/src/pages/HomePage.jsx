@@ -101,10 +101,10 @@ export default function HomePage() {
           <p className="text-slate-500 mb-12">From cozy singles to lavish suites — find your perfect fit.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { type: 'Single', price: 'From $65', emoji: '🛏️', color: 'from-blue-500 to-blue-700' },
-              { type: 'Double', price: 'From $120', emoji: '🛌', color: 'from-emerald-500 to-emerald-700' },
-              { type: 'Deluxe', price: 'From $180', emoji: '🌟', color: 'from-purple-500 to-purple-700' },
-              { type: 'Suite', price: 'From $350', emoji: '👑', color: 'from-amber-500 to-orange-600' },
+              { type: 'Single', price: 'From Rs. 65', emoji: '🛏️', color: 'from-blue-500 to-blue-700' },
+              { type: 'Double', price: 'From Rs. 120', emoji: '🛌', color: 'from-emerald-500 to-emerald-700' },
+              { type: 'Deluxe', price: 'From Rs. 180', emoji: '🌟', color: 'from-purple-500 to-purple-700' },
+              { type: 'Suite', price: 'From Rs. 350', emoji: '👑', color: 'from-amber-500 to-orange-600' },
             ].map(({ type, price, emoji, color }) => (
               <div key={type} className={`bg-gradient-to-br ${color} text-white rounded-2xl p-6 text-center hover:scale-105 transition-transform cursor-pointer`}
                 onClick={() => navigate('/rooms')}>
