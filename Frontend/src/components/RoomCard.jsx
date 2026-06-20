@@ -61,7 +61,7 @@ export default function RoomCard({ room }) {
 
         <div className="flex items-center justify-between pt-3 border-t border-slate-100">
           <div>
-            <span className="text-2xl font-bold text-slate-800">${room.pricePerNight}</span>
+            <span className="text-2xl font-bold text-slate-800">Rs. {room.pricePerNight.toLocaleString()}</span>
             <span className="text-slate-400 text-sm"> / night</span>
           </div>
           {room.isAvailable ? (

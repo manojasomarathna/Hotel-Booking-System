@@ -53,8 +53,8 @@ export default function AdminDashboard() {
               { label: 'Pending', value: stats.pendingBookings, icon: Clock, color: 'bg-yellow-500' },
               { label: "Today's Check-ins", value: stats.todayCheckIns, icon: Users, color: 'bg-indigo-500' },
               { label: "Today's Check-outs", value: stats.todayCheckOuts, icon: TrendingUp, color: 'bg-pink-500' },
-              { label: 'Monthly Revenue', value: `$${stats.monthlyRevenue.toFixed(0)}`, icon: DollarSign, color: 'bg-amber-500' },
-              { label: 'Total Revenue', value: `$${stats.totalRevenue.toFixed(0)}`, icon: DollarSign, color: 'bg-emerald-500' },
+              { label: 'Monthly Revenue', value: `Rs. ${stats.monthlyRevenue.toLocaleString()}`, icon: DollarSign, color: 'bg-amber-500' },
+              { label: 'Total Revenue', value: `Rs. ${stats.totalRevenue.toLocaleString()}`, icon: DollarSign, color: 'bg-emerald-500' },
             ].map(({ label, value, icon: Icon, color }) => (
               <div key={label} className="bg-white rounded-2xl p-5 shadow-sm">
                 <div className={`w-10 h-10 ${color} rounded-xl flex items-center justify-center mb-3`}>
@@ -103,7 +103,7 @@ export default function AdminDashboard() {
                     </td>
                     <td className="px-4 py-3 text-sm text-slate-600">{format(new Date(b.checkInDate), 'dd MMM yy')}</td>
                     <td className="px-4 py-3 text-sm text-slate-600">{format(new Date(b.checkOutDate), 'dd MMM yy')}</td>
-                    <td className="px-4 py-3 text-sm font-semibold text-slate-800">${b.totalAmount.toFixed(0)}</td>
+                    <td className="px-4 py-3 text-sm font-semibold text-slate-800">Rs. {b.totalAmount.toLocaleString()}</td>
                     <td className="px-4 py-3">
                       <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${statusStyles[b.status]}`}>
                         {b.status}

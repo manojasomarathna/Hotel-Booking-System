@@ -62,7 +62,7 @@ export default function MyBookingsPage() {
                     <p className="text-slate-500 text-sm">Booking #{b.id}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-2xl font-bold text-slate-800">${b.totalAmount.toFixed(2)}</p>
+                    <p className="text-2xl font-bold text-slate-800">Rs. {b.totalAmount.toLocaleString()}</p>
                     <p className="text-slate-400 text-xs">Total amount</p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function MyBookingsPage() {
                     <DollarSign size={14} className="text-amber-500" />
                     <div>
                       <p className="text-xs text-slate-400">Per Night</p>
-                      <p className="font-medium">${b.room.pricePerNight}</p>
+                      <p className="font-medium">Rs. {b.room.pricePerNight.toLocaleString()}</p>
                     </div>
                   </div>
                 </div>

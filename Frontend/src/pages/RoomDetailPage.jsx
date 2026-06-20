@@ -66,7 +66,7 @@ export default function RoomDetailPage() {
                   <h1 className="text-3xl font-bold text-slate-800 mt-1">Room {room.roomNumber}</h1>
                 </div>
                 <div className="text-right">
-                  <span className="text-3xl font-bold text-slate-800">${room.pricePerNight}</span>
+                  <span className="text-3xl font-bold text-slate-800">Rs. {room.pricePerNight.toLocaleString()}</span>
                   <span className="text-slate-400 text-sm"> / night</span>
                 </div>
               </div>
@@ -129,12 +129,12 @@ export default function RoomDetailPage() {
                 {nights > 0 && (
                   <div className="bg-amber-50 rounded-xl p-4 space-y-2 text-sm">
                     <div className="flex justify-between text-slate-600">
-                      <span>${room.pricePerNight} × {nights} nights</span>
-                      <span>${(room.pricePerNight * nights).toFixed(2)}</span>
+                      <span>Rs. {room.pricePerNight.toLocaleString()} × {nights} nights</span>
+                      <span>Rs. {(room.pricePerNight * nights).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between font-bold text-slate-800 text-base pt-2 border-t border-amber-200">
                       <span>Total</span>
-                      <span className="text-amber-600">${(room.pricePerNight * nights).toFixed(2)}</span>
+                      <span className="text-amber-600">Rs. {(room.pricePerNight * nights).toLocaleString()}</span>
                     </div>
                   </div>
                 )}
